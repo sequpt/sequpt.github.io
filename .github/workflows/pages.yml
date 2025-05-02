@@ -23,13 +23,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Build site
-        run: |
-          mkdir build
-          cp ./src/index.html ./build
+        run: BUILD_ENV=prod make all
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build # Default: `_site/`
+          path: ./build/site # Default: `_site/`
   deploy:
     needs: build
     runs-on: ubuntu-latest
