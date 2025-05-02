@@ -1,0 +1,34 @@
+:root {
+  --font-family-system: system-ui /* https://caniuse.com/?search=system-ui */,
+    '-apple-system' /* Older Safari on iOS and macOS */,
+    'BlinkMacSystemFont' /* Older Chrome on macOS */, 'Segoe UI' /* Windows */,
+    'Roboto' /* Android/Chrome OS */, 'Noto Sans', Helvetica /* Fallback */,
+    Arial /* Fallback */, sans-serif /* Fallback */;
+  --font-size: 16px; /* De facto value set by all browsers */
+  --line-height: 1.5; /* https://www.w3.org/TR/WCAG21/#visual-presentation */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  font-family: var(--font-family-system);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+ul,
+ol {
+  list-style: none;
+}
