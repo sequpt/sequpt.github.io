@@ -16,4 +16,4 @@ all:
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILD_PATH)
+	rm -rf $(BUILD_PATH)/site
